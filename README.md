@@ -1,13 +1,3 @@
-# Voxel Survival — Universe 58
+# Voxel Survival Universe 59
 
-Мобильная voxel survival-игра на Three.js.
-
-Новое в Universe 58:
-- убрана механика «Ночная орда»;
-- добавлена кровать в стиле классической voxel-механики: сон ночью пропускает ночь и устанавливает точку возрождения;
-- добавлены шерсть и рецепт кровати;
-- точка возрождения сохраняется в мире;
-- исправлен импорт CONFIG в SurvivalSystems;
-- обновлён cache-busting.
-
-Использованы оригинальные процедурные материалы и UI, без ресурсов Minecraft.
+Fix: main menu buttons now initialize correctly on iPhone/Safari. Removed the dark central menu backdrop panel and fixed cache-busting.
