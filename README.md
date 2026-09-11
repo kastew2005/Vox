@@ -1,10 +1,13 @@
-# Voxel Survival Universe 51
+# Voxel Survival — Universe 58
 
-Universe 51 redesigns the gameplay HUD and inventory in the same premium voxel/metal style as the menu.
+Мобильная voxel survival-игра на Three.js.
 
-- Larger layered hotbar with selected-slot elevation and shadows.
-- Compact health/hunger/world-time panel.
-- Target and selected-item cards.
-- Redesigned inventory window with section headers, selected-item info, 36-slot grid, and detailed crafting cards.
-- Existing gameplay logic, touch controls, pause controls, world saves and multiplayer remain intact.
-- Runtime uses `js51/` only.
+Новое в Universe 58:
+- убрана механика «Ночная орда»;
+- добавлена кровать в стиле классической voxel-механики: сон ночью пропускает ночь и устанавливает точку возрождения;
+- добавлены шерсть и рецепт кровати;
+- точка возрождения сохраняется в мире;
+- исправлен импорт CONFIG в SurvivalSystems;
+- обновлён cache-busting.
+
+Использованы оригинальные процедурные материалы и UI, без ресурсов Minecraft.
