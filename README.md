@@ -1,3 +1,1 @@
-# Voxel Survival Universe 59
-
-Fix: main menu buttons now initialize correctly on iPhone/Safari. Removed the dark central menu backdrop panel and fixed cache-busting.
+Voxel Survival Universe 60 — full code audit and menu fix. Fixed runtime crash in QualityManager caused by missing THREE import; hardened menu pointer events; removed menu overlay squares; synchronized world-launch session key and cache version.

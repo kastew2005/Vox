@@ -34,3 +34,10 @@ button,.menuBtn45,.backBtn45,.newWorldBtn45,.worldAction45{font-family:Arial,Hel
 #pauseMenu{z-index:500!important;pointer-events:auto!important}
 #pauseMenu .menuPanel,#pauseMenu .menuPanel button{pointer-events:auto!important}
 #pauseMenu .menuPanel button{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+
+/* Universe 60 — menu interaction hardening */
+#mainMenu,.mainMenu45{pointer-events:auto!important}
+#mainMenu .mainMenuCenter,.menuVersion{pointer-events:auto!important}
+#mainMenu .menuBackdrop,.sceneVignette,.sceneShade{pointer-events:none!important}
+#mainMenu .sceneVignette,#mainMenu .sceneShade{display:none!important}
+#mainMenu button{position:relative;z-index:200;pointer-events:auto!important}
