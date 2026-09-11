@@ -84,7 +84,7 @@ class Game{
   }
  }
  findGround(x,z){for(let y=CONFIG.WORLD.HEIGHT-1;y>=0;y--)if(INFO[this.world.getBlock(Math.floor(x),y,Math.floor(z))]?.solid)return y+1;return 70}
- newWorld(name="Новый мир",seed=""){this.skipUnloadSave=true;this.running=false;this.network.disconnect();const id=SaveManager.createWorld(name,seed);try{sessionStorage.setItem("vs_launch_world_v53",id)}catch(e){}location.reload()
+ newWorld(name="Новый мир",seed=""){this.skipUnloadSave=true;this.running=false;this.network.disconnect();const id=SaveManager.createWorld(name,seed);try{sessionStorage.setItem("vs_launch_world_v60",id)}catch(e){}location.reload()
  hostLAN(){this.save();const u=`${location.protocol==="https:"?"wss":"ws"}://${location.host}/ws`;this.mode="lan-host";this.setModeBadge();this.menu.hideMain();this.network.connect(u,true);this.network.chatLine("★ Локальная игра открыта для друзей");this.network.syncHostWorld();this.running=true;if(!matchMedia("(pointer:coarse)").matches)this.renderer.domElement.requestPointerLock?.()}
  connectLAN(){const v=document.getElementById("lanAddress"),u=v?.value.trim();if(!u){this.network.chatLine("Укажи адрес LAN-сервера");return}this.mode="lan-client";this.setModeBadge();this.menu.hideMain();this.network.connect(u,false);this.running=true;if(!matchMedia("(pointer:coarse)").matches)this.renderer.domElement.requestPointerLock?.()}
  resume(){this.menu.hidePause();this.running=true;this.setGameUI(true);this.renderer.domElement.requestPointerLock?.()}
@@ -191,7 +191,7 @@ async toggleFullscreen(){try{if(document.fullscreenElement){await document.exitF
  resize(){this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight)}
 }
 const game=new Game();
-try{if(sessionStorage.getItem("vs_launch_world_v53")){sessionStorage.removeItem("vs_launch_world_v53");requestAnimationFrame(()=>setTimeout(()=>game.start(),120))}}catch(e){console.warn("Auto world launch skipped",e)}
+try{if(sessionStorage.getItem("vs_launch_world_v60")){sessionStorage.removeItem("vs_launch_world_v60");requestAnimationFrame(()=>setTimeout(()=>game.start(),120))}}catch(e){console.warn("Auto world launch skipped",e)}
 const boot=document.getElementById("bootSplash"),bar=document.getElementById("bootProgress"),status=document.getElementById("bootStatus");
 requestAnimationFrame(()=>{if(bar)bar.style.width="100%";if(status)status.textContent="Готово";setTimeout(()=>boot?.classList.add("done"),80)});
 addEventListener("beforeunload",()=>{if(!game.skipUnloadSave)game.save()});

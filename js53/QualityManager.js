@@ -1,3 +1,4 @@
+import THREE from "./three.js";
 export class QualityManager {
   constructor() {
     const mem = Number(navigator.deviceMemory || 4);
